@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+   <header>                 
+    <img src="./assets/images/logo.svg" alt="Website Logo">
+    <button class="btn">
+      <img src="./assets/images/icon-sun.svg" alt="logo">
+    </button>
+   </header>
+
+  <!-- Main -->
+   <main>
+      <section class="extension-list">
+        <h2>Extensions Lists</h2>
+        <ul>
+          <li><a href="#" class="active">All</a></li>
+          <li><a href="#">Active</a></li>
+          <li><a href="#">Inactive</a></li>
+        </ul>
+      </section>
+      <section class="grid">
+        <div class="box-list">
+          <div class="top">
+            <img src="./assets/images/logo-devlens.svg" alt="devlens">
+            <div class="icon-intro">
+              <h3>Devlens</h3>
+              <p>Quickly inspect page layouts and visualize element boundaries.</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="btn btn-border">Remove</button>
+            <span class="active-state inactive">
+              <div class="circle inactive"></div>
+            </span>
+          </div>
+        </div>
+        <div class="box-list">
+          <div class="top">
+            <img src="./assets/images/logo-style-spy.svg" alt="devlens">
+            <div class="icon-intro">
+              <h3>StyleSpy</h3>
+              <p>Instantly analyze and copy CSS from any webpage element</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="btn btn-border">Remove</button>
+            <span class="active-state inactive">
+              <div class="circle inactive"></div>
+            </span>
+          </div>
+        </div>
+        <div class="box-list">
+          <div class="top">
+            <img src="./assets/images/logo-speed-boost.svg" alt="devlens">
+            <div class="icon-intro">
+              <h3>SpeedBoost</h3>
+              <p>Optimizes browser resource usage to accelerate page loading.</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="btn btn-border">Remove</button>
+            <span class="active-state">
+              <div class="circle"></div>
+            </span>
+          </div>
+        </div>
+        <div class="box-list">
+          <div class="top">
+            <img src="./assets/images/logo-json-wizard.svg" alt="devlens">
+            <div class="icon-intro">
+              <h3>JSONWizard</h3>
+              <p>Formats, validates, and prettifies JSON responses in-browser.</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="btn btn-border">Remove</button>
+            <span class="active-state inactive">
+              <div class="circle inactive"></div>
+            </span>
+          </div>
+        </div>
+        <div class="box-list">
+          <div class="top">
+            <img src="./assets/images/logo-tab-master-pro.svg" alt="devlens">
+            <div class="icon-intro">
+              <h3>TabMaster Pro</h3>
+              <p>Organizes browser tabs into groups and sessions.</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="btn btn-border">Remove</button>
+            <span class="active-state">
+              <div class="circle"></div>
+            </span>
+          </div>
+        </div>
+        <div class="box-list">
+          <div class="top">
+            <img src="./assets/images/logo-viewport-buddy.svg" alt="devlens">
+            <div class="icon-intro">
+              <h3>ViewportBuddy</h3>
+              <p>Simulates various screen resolutions directly within the browser.</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="btn btn-border">Remove</button>
+            <span class="active-state inactive">
+              <div class="circle inactive"></div>
+            </span>
+          </div>
+        </div>
+        <div class="box-list">
+          <div class="top">
+            <img src="./assets/images/logo-markup-notes.svg" alt="devlens">
+            <div class="icon-intro">
+              <h3>Markup Notes</h3>
+              <p>Enables annotation and notes directly onto webpages for collaborative debugging.</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="btn btn-border">Remove</button>
+            <span class="active-state">
+              <div class="circle"></div>
+            </span>
+          </div>
+        </div>
+        <div class="box-list">
+          <div class="top">
+            <img src="./assets/images/logo-grid-guides.svg" alt="devlens">
+            <div class="icon-intro">
+              <h3>GridGuides</h3>
+              <p>Overlay customizable grids and alignment guides on any webpage.</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="btn btn-border">Remove</button>
+            <span class="active-state">
+              <div class="circle"></div>
+            </span>
+          </div>
+        </div>
+        <div class="box-list">
+          <div class="top">
+            <img src="./assets/images/logo-palette-picker.svg" alt="devlens">
+            <div class="icon-intro">
+              <h3>Pallet Picker</h3>
+              <p>Instantly extracts color palettes from any webpage.</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="btn btn-border">Remove</button>
+            <span class="active-state inactive">
+              <div class="circle inactive"></div>
+            </span>
+          </div>
+        </div>
+        <div class="box-list">
+          <div class="top">
+            <img src="./assets/images/logo-link-checker.svg" alt="devlens">
+            <div class="icon-intro">
+              <h3>LinkChecker</h3>
+              <p>Scan and highlights broken links on any page.</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="btn btn-border">Remove</button>
+            <span class="active-state">
+              <div class="circle"></div>
+            </span>
+          </div>
+        </div>
+        <div class="box-list">
+          <div class="top">
+            <img src="./assets/images/logo-dom-snapshot.svg" alt="devlens">
+            <div class="icon-intro">
+              <h3>DOM Snapshopt</h3>
+              <p>Capture and export DOM structures quickly.</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="btn btn-border">Remove</button>
+            <span class="active-state">
+              <div class="circle"></div>
+            </span>
+          </div>
+        </div>
+        <div class="box-list">
+          <div class="top">
+            <img src="./assets/images/logo-console-plus.svg" alt="devlens">
+            <div class="icon-intro">
+              <h3>Console Plus</h3>
+              <p>Enhanced developer with advanced filtering and logging.</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <button class="btn btn-border">Remove</button>
+            <span class="active-state inactive">
+              <div class="circle inactive"></div>
+            </span>
+          </div>
+        </div>
+      </section>
+   </main>
+   <script src="index.js"></script>
+</body>
+</html>

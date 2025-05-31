@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <form>
+        <input type="text" id="input">
+        <button class="btn" id="add">Add</button>
+    </form>
+    <ul id="output">
+    </ul>
+    <script>
+        const todoForm = document.querySelector('form');
+        const input = document.getElementById('input');
+        const add = document.getElementById('add');
+        const output = document.getElementById('output');
+        let arr = getData();
+        updateArray();
+        // const arr = [];
+
+        todoForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            addTodo();
+        });
+
+        function addTodo() {
+            const values = input.value.trim();
+            if(values.length > 0) {
+                const object = {
+                    text: values,
+                    completed: false
+                }
+                arr.push(object);
+                
+                updateArray();
+                saveData();
+                input.value = '';
+            }
+        }
+
+        function addItemLi(list, index) {
+            const id = "todo-"+index;
+            const text = list.text;
+            let lists = document.createElement('li');
+            lists.innerHTML = `
+                <input type="checkbox" id="${id}">
+                <label for="${id}">${text}</label>
+                <button class="btn" id="delete">Delete</button> 
+            `;
+
+            let del = lists.querySelector('.btn');
+            del.addEventListener('click', ()=> {
+                deleteItem(index);
+            });
+            const checkbox = lists.querySelector('input');
+            checkbox.addEventListener('change', ()=> {
+                arr[index].completed = checkbox.checked;
+                saveData();
+            });
+            checkbox.checked = list.completed;
+            return lists;
+
+        }
+
+        function updateArray() {
+            output.innerHTML = '';
+            arr.forEach((item, index) => {
+                lists = addItemLi(item, index);
+                output.append(lists);
+            });
+        }
+
+        function deleteItem(index) {
+            arr = arr.filter((_,i) => i !== index);
+            saveData();
+            updateArray();
+        }
+
+        function saveData() {
+            const todoData = JSON.stringify(arr);
+            localStorage.setItem('data', todoData);
+        }
+
+        function getData() {
+            const getData = localStorage.getItem('data') || '[]';
+            return JSON.parse(getData);
+        }
+
+
+
+
+    </script>
+</body>
+</html>
